@@ -246,16 +246,7 @@ fun_getServer(){
 }
 fun_getVer(){
     echo -e "Loading network version for ${program_name}, please wait..."
-    # case $choice in
-    #     1)  LATEST_RELEASE=$(curl -s ${gitee_latest_version_api} | grep -oP '"tag_name":"\Kv[^"]+' | cut -c2-);;
-    #     2)  LATEST_RELEASE=$(curl -s ${github_latest_version_api} | grep '"tag_name":' | cut -d '"' -f 4 | cut -c 2-);;
-    # esac
-    # if [[ ! -z "$LATEST_RELEASE" ]]; then
-    #     FRPS_VER="$LATEST_RELEASE"
-    #     echo "FRPS_VER set to: $FRPS_VER"
-    # else
-    #     echo "Failed to retrieve the latest version."
-    # fi
+
     program_latest_filename="frp_${FRPS_VER}_linux_${ARCHS}.tar.gz"
     program_latest_file_url="${program_download_url}/v${FRPS_VER}/${program_latest_filename}"
     echo "${program_latest_file_url}"
