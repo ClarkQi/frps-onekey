@@ -267,6 +267,7 @@ fun_getVer(){
 }
 fun_download_file(){
     # download
+    echo "${program_latest_file_url}"
     if [ ! -s ${str_program_dir}/${program_name} ]; then
         rm -fr ${program_latest_filename} frp_${FRPS_VER}_linux_${ARCHS}
 	echo -e "Downloading ${program_name}..."
