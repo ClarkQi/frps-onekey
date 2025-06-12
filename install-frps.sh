@@ -7,7 +7,7 @@ export PATH
 # Set environment variables
 export FRPS_VER="$LATEST_RELEASE"
 export FRPS_VER_32BIT="$LATEST_RELEASE"
-export FRPS_INIT="https://raw.githubusercontent.com/mvscode/frps-onekey/master/frps.init"
+export FRPS_INIT="https://raw.githubusercontent.com/ClarkQi/frps-onekey/refs/heads/master/frps.init"
 export gitee_download_url="https://gitee.com/mvscode/frps-onekey/releases/download"
 export github_download_url="https://github.com/fatedier/frp/releases/download"
 export gitee_latest_version_api="https://gitee.com/api/v5/repos/mvscode/frps-onekey/releases/latest"
@@ -20,7 +20,7 @@ str_program_dir="/usr/local/${program_name}"
 program_init="/etc/init.d/${program_name}"
 program_config_file="frps.toml"
 ver_file="/tmp/.frp_ver.sh"
-str_install_shell="https://raw.githubusercontent.com/mvscode/frps-onekey/master/install-frps.sh"
+str_install_shell="https://raw.githubusercontent.com/ClarkQi/frps-onekey/refs/heads/master/install-frps.sh"
 
 # Function to check for shell updates
 shell_update() {
@@ -258,6 +258,7 @@ fun_getVer(){
     fi
     program_latest_filename="frp_${FRPS_VER}_linux_${ARCHS}.tar.gz"
     program_latest_file_url="${program_download_url}/v${FRPS_VER}/${program_latest_filename}"
+    echo "${program_latest_file_url}"
     if [ -z "${program_latest_filename}" ]; then
         echo -e "${COLOR_RED}Load network version failed!!!${COLOR_END}"
     else
