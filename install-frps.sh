@@ -255,7 +255,7 @@ fun_getVer(){
     #     echo "FRPS_VER set to: $FRPS_VER"
     # else
     #     echo "Failed to retrieve the latest version."
-    fi
+    # fi
     program_latest_filename="frp_${FRPS_VER}_linux_${ARCHS}.tar.gz"
     program_latest_file_url="${program_download_url}/v${FRPS_VER}/${program_latest_filename}"
     echo "${program_latest_file_url}"
